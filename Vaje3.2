@@ -1,0 +1,15 @@
+4.
+  pi ename (employees stik (pi eid (select cruisingrange>3000(Aircraft 
+   stik certified)) - pi eid(select aname=boeing(a stik c))))
+
+  RC
+   {<en>|<e,en,s> € Employess and E<e1,a1> € certified (e=e1 and E<a2,an2,cr2>
+     € aircraft(a1=a2 and cr2 > 3000)) and not(E<e3,a3> € certified (E<a4,an4,cr4>
+	€ aircraft(a3=a4 and an4=boeing and e=e3)))}					za to letalo naj obstaja
+
+
+5.RA  copy (e1,employees) copy (e2, employees)
+
+   pi eid(employees) - pi e2.eid(e1 theta stik e1.salary > e2.salary e2)
+
+  RC  {<e>|<e,en,s> € employees and not(E<e1,en1,s1> € employees (s<s1))}

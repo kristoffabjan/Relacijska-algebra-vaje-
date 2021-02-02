@@ -1,0 +1,5 @@
+1. pi rno (Rtype =1 and Rprice<=80)
+2. pi Rno, Rprice,Rtype ((O Hname='Bernardin') (H stik R))
+3. pi Gname, Rprice, Rtype (O H.name=Berrnardin and Bfrom<=today and Bto>today) (G stik h stik r stik b)
+4. pi Hname, Crno, ARprice (preimenovanje z(hno, hname, crno,ARprice)(HNo, Hname grupiramo count (Rno), avg(RPrice))(H stik R))
+5.pi * (R polstik (izberi Hname= bernardin(H)) lev odpri stik ((brfrom<=today and bto> today) stik G))

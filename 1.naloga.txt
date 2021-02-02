@@ -1,0 +1,12 @@
+E-obstaja
+1.RA pi sid (select color=red or color=green)(P stik C)
+ RC {<s> | <s,p,c> € Catalog and E<p1,pn1,c1 € Parts (P=P1 and (C1=red or 
+	C1=green))}
+
+2.RA pi sid(select color = red(catalog stik parts)) Unija pi sid (select
+	adress = koprsak cesta(S))
+ RC {<s> | <s,p,c> € catalog and E <p1,pn1,c1> € parts (p=p1 and c1=red)
+	or E<s2,sn2,ad2> € suppliers(ad2=koperska cesta 2)}
+
+3. RA: pi sid (select color = red (c stik p) presek pi (select color
+	=green(c stik p)))

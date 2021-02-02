@@ -1,0 +1,35 @@
+E-obstaja
+V -vsak
+X -kartezicni prod.
+1.RA pi sid (select color=red or color=green)(P stik C)
+ RC {<s> | <s,p,c> € Catalog and E<p1,pn1,c1 € Parts (P=P1 and (C1=red or 
+	C1=green))}
+
+2.RA pi sid(select color = red(catalog stik parts)) Unija pi sid (select
+	adress = koprsak cesta(S))
+ RC {<s> | <s,p,c> € catalog and E <p1,pn1,c1> € parts (p=p1 and c1=red)
+	or E<s2,sn2,ad2> € suppliers(ad2=koperska cesta 2)}
+
+3. RA: pi sid (select color = red (c stik p) presek pi (select color
+	=green(c stik p)))
+
+   RC {<s> | <s,p,c> € catalog and E <p1,pn1,c1> € parts (p=p1 and c1=red) and
+	E<s2,p2,c2> € catalog(E<p3,pn3,c3> € parts(p2=p3 and color = green)) and s=s2}
+
+4. RA: pi sid, pid(Catalog) / pi pid(Parts)
+   RC : {<S> | <s,p,c> € catalog and V <p1,pn1,c1> € Parts(E <s2,p2,c2> € catalog(p1=p2 and
+	s=s2))}
+
+5. RA pi sid,pid(catalog) / pi pid (select color=red (Parts)) 
+   RC 	{<S> | <s,p,c> € catalog and V <p1,pn1,c1> € Parts(c1=red and E <s2,p2,c2> € catalog(p1=p2 and
+	s=s2))}
+
+6. RA pi sid,pid(catalog) / pi pid (select color=red or color=green(Parts)) 
+  RC 	{<S> | <s,p,c> € catalog and V <p1,pn1,c1> € Parts((c1=red or c1=green) and E <s2,p2,c2> €
+ 	catalog(p1=p2 and s=s2))} 
+
+7. RA dve kopiji relacije katalog 
+	kopija (c1, Catalog) kopija(c2, Catalog)
+	pi c1.pid (select (c1.pid=c2.pid and c1.sid != c2.sid(c1 X c2)))
+   RC {<p>|<s,p,c> € Catalog and E<s1,p1,c1> € Catalog (P=P1 and s!=s1)}
+	

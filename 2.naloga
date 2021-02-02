@@ -1,0 +1,17 @@
+1.
+  RA pi eid (select name = boeing(C stik A))
+  RC {<e>|<e,a> € Certified and E<a1,an1,cr1> € Aircraft(a=a1 and an1=boeing)}
+2.
+  RA pi ename(sleect aname=boeing(c stik a stik e))
+  RC {<en>|<ei,en,s>€ Employees and E<e1,a1>€ Certified(e=e1 and E<a2,an2,cr2> € Aircraft(a1 = an2 and
+ 	an2=boeing )) }
+
+3.
+   RA kopija(f1, select from=paris and to = vancouver(flights))
+
+	pi a.aid(select a.crusingrange> f1.distance (A X f1))
+
+   RC :{<a>|<a,an,ct> €  Aircraft and E<f1,fr1,to1,d1,de1,ar1> € Flights (fr1=paris and to1=vancouver
+ 	and cr>d1)}
+
+4. RA pi eid
